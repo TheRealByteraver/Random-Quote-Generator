@@ -59,7 +59,10 @@ let lastQuoteIndex = -1;
 // Make the browser call the printQuote function automatically every 10 seconds:
 setInterval(printQuote, 10000);
 
-// This function returns a random number between 0 and max, excluding max:
+/***
+ * `getRandom` function
+ * This function returns a random number between 0 and max, excluding max
+***/
 function getRandom(max) {
   return Math.floor(Math.random() * max);
 }
@@ -70,7 +73,8 @@ function getRandom(max) {
  * and makes sure the quote differs from the previously displayed quote
 ***/
 function getRandomQuote() {
-  
+
+  // Make sure the new index in the quotes array differs from the previous one:
   let randomIndex;
   do {
     randomIndex = getRandom (quotes.length);
@@ -85,6 +89,7 @@ function getRandomQuote() {
 
 /***
  * `printQuote` function
+ * This function will get a new random quote and display it on the webpage
 ***/
 function printQuote() {
 
